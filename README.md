@@ -108,17 +108,7 @@ The parameter space is `θ = [θ_A, θ_B]` where each region has independent ste
 
 ## Citation
 
-```bibtex
-@ARTICLE{2021ApJS..254...22J,
-   author = {{Johnson}, Benjamin D. and {Leja}, Joel and {Conroy}, Charlie and {Speagle}, Joshua S.},
-   title = "{Stellar Population Inference with Prospector}",
-   journal = {ApJS},
-   year = 2021,
-   volume = {254},
-   pages = {22},
-   doi = {10.3847/1538-4365/abef67}
-}
-```
+Working on ASCL entry
 
 ## It currently works for
 
