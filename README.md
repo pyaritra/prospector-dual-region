@@ -108,7 +108,33 @@ The parameter space is `θ = [θ_A, θ_B]` where each region has independent ste
 
 ## Citation
 
-Working on ASCL entry
+**This work:**
+```bibtex
+@software{your_name_2024_prospector_dual,
+  author       = {Aritra Aich},
+  title        = {Prospector Dual-Region SED Fitting},
+  month        = dec,
+  year         = 2024,
+  publisher    = {Zenodo},
+  version      = {v0.1.0},
+  doi          = {10.5281/zenodo.17805754},
+  url          = {https://doi.org/10.5281/zenodo.17805754}
+}
+```
+
+**Prospector:**
+```bibtex
+@ARTICLE{2021ApJS..254...22J,
+   author = {{Johnson}, Benjamin D. and {Leja}, Joel and 
+             {Conroy}, Charlie and {Speagle}, Joshua S.},
+   title = "{Stellar Population Inference with Prospector}",
+   journal = {ApJS},
+   year = 2021,
+   volume = {254},
+   pages = {22},
+   doi = {10.3847/1538-4365/abef67}
+}
+```
 
 ## It currently works for
 
