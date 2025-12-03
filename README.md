@@ -4,13 +4,9 @@ A custom extension for [Prospector](https://github.com/bd-j/prospector) that ena
 
 **Use case**: When you have high-resolution photometry (e.g., HST) that resolves two regions separately, but low-resolution photometry (e.g., WISE) where both regions are blended together.
 
-## Features
 
-- ✅ Simultaneous fitting of two independent stellar population models
-- ✅ Enforces constraint that blended bands equal sum of model predictions
-- ✅ Full Bayesian inference with nested sampling (dynesty)
-- ✅ Compatible with all standard Prospector features (flexible SFHs, nebular emission, dust, etc.)
-- ✅ Returns posteriors for both regions' physical properties
+- Simultaneous fitting of two independent stellar population models
+- Adds constraint that blended bands equal sum of model predictions
 
 ## Installation
 
@@ -78,7 +74,7 @@ print("Region A best-fit parameters:", output['bestfit_params_a'])
 print("Region B best-fit parameters:", output['bestfit_params_b'])
 ```
 
-See `examples/example_usage.py` for a more detailed example.
+See `examples/exampl_usage.py`for additional info
 
 ## How It Works
 
@@ -110,30 +106,8 @@ where:
 
 The parameter space is `θ = [θ_A, θ_B]` where each region has independent stellar population parameters.
 
-## Documentation
-
-- **[docs/README_DUAL_REGION.md](docs/README_DUAL_REGION.md)**: Detailed documentation covering:
-  - Data preparation and format requirements
-  - Customization options (priors, SFH types, nebular emission)
-  - Performance optimization
-  - Troubleshooting guide
-
-- **[examples/example_usage.py](examples/example_usage.py)**: Complete example showing:
-  - How to load and format your data
-  - How to run the fit
-  - How to extract physical properties
-  - How to make diagnostic plots
-
 ## Citation
 
-If you use this code in your research, please cite both this repository and the original Prospector paper:
-
-**This work:**
-```
-[Your citation format - could add a Zenodo DOI]
-```
-
-**Prospector:**
 ```bibtex
 @ARTICLE{2021ApJS..254...22J,
    author = {{Johnson}, Benjamin D. and {Leja}, Joel and {Conroy}, Charlie and {Speagle}, Joshua S.},
@@ -146,14 +120,11 @@ If you use this code in your research, please cite both this repository and the 
 }
 ```
 
-## Use Cases
+## It currently works for
 
-This tool is designed for scenarios like:
 
 - **Lensed galaxies**: Multiple lensed images resolved in HST but blended in WISE/Spitzer
-- **Merging galaxies**: Two distinct components in optical but blended in IR
 - **Spatially resolved galaxies**: Different regions (e.g., bulge + disk) with partial resolution
-- **Binary AGN/QSO**: Resolved optically but blended in IR
 
 ## Examples
 
@@ -167,33 +138,13 @@ Coming soon: Example notebooks for:
 Contributions welcome! Some ideas:
 
 - [ ] Extend to >2 regions
-- [ ] Add support for spectroscopy
-- [ ] Implement joint priors between regions
-- [ ] Add convenience plotting functions
 - [ ] Support for Prospector v2.X Observation classes
-
-## Performance
-
-**Typical runtimes** (on modern CPU):
-- Test fit (`nlive_init=300`): ~1-2 hours
-- Production fit (`nlive_init=500`): ~4-8 hours
-- High-accuracy fit (`nlive_init=1000`): ~12-24 hours
-
-Runtime scales approximately as:
-- Linear with `nlive_init`
-- ~3× slower than single-region fits (due to doubled SPS calls)
-
-## License
-
-MIT License (same as Prospector)
 
 ## Contact
 
 - **Issues**: Please open an issue on GitHub
-- **Questions**: [Your contact or discussion forum]
 
 ## Acknowledgments
 
-This package builds on [Prospector](https://github.com/bd-j/prospector) by Ben Johnson, Joel Leja, Charlie Conroy, and Joshua Speagle.
+This pkg builds on Prospector(https://github.com/bd-j/prospector)
 
-Developed for spatially resolved SED fitting of gravitationally lensed galaxies and star-forming regions.
