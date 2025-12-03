@@ -1,4 +1,5 @@
 # Prospector Dual-Region SED Fitting
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg)](https://doi.org/10.5281/zenodo.17805754)
 
 A custom extension for [Prospector](https://github.com/bd-j/prospector) that enables simultaneous SED fitting of two spatially resolved regions with shared (blended) photometry in some bands.
 
